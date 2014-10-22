@@ -2,13 +2,16 @@
 <widget id="pt.smartdigit.loginApp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>loginApp</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A simple app to login
     </description>
     <author email="pedro@smartdigit.pt" href="http://www.smartdigit.pt/">
         Pedro Lobo
     </author>
     <content src="index.html" />
     <access origin="*" />
+	
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
 	
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 	
