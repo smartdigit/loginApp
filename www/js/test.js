@@ -20,7 +20,7 @@ function login(user,pass)
 					saveUser(user,pass);
 				}
 				
-				var ref = window.open("http://11.99.99.41:81/?pg=login_external&sessionid="+data.Session_id,'_blank',"location=no,toolbar=no,presentationstyle=pagesheet");
+				var ref = window.open("http://11.99.99.41:81/?pg=login_external&sessionid="+data.Session_id,'_blank',"location=no,toolbar=no");
 				ref.addEventListener('loadstart', function(event){
 					if(event.url.indexOf("index.php?pg=logout") >= 0){
 						ref.close();
