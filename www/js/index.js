@@ -33,12 +33,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-		var remember = getRemember();
-		
-		if(remember === "true")
+        app.receivedEvent('deviceready');		
+		if(getRemember())
 		{
-//alert("rememberme: "+remember);
 			$("#rememberme").attr("checked",true).checkboxradio('refresh');
 			loadUser();
 		}

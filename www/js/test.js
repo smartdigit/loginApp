@@ -1,6 +1,6 @@
-function login(user,pass,remember)
+function login(user,pass)
 {
-alert(remember);
+
 //var user = $("#uname").val();
 //var pass = $("#pass").val();
 	$.ajax({
@@ -14,9 +14,9 @@ alert(remember);
 			data = JSON.parse(data);
 			if(data.Logged)
 			{
-				if(remember)
+				if(getRemember())
 				{
-					saveRemember(remember);
+					//saveRemember(remember);
 					saveUser(user,pass);
 				}
 				
@@ -65,10 +65,5 @@ function saveRemember(remember)
 
 function getRemember()
 {
-	var remember = window.localStorage.getItem("rememberme");
-	if(remember)
-	{
-		return remember;
-	}
-	return false;
+	return  window.localStorage.getItem("rememberme") == "true";
 }
