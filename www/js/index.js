@@ -40,7 +40,7 @@ var app = {
 			loadUser();
 			login($('#uname').val(),$('#pass').val());
 		}
-		
+		alert(location.href);
         console.log('Received Event: ' + id);
     },
     // Update DOM on a Received Event
