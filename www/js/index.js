@@ -38,6 +38,7 @@ var app = {
 		{
 			$("#rememberme").attr("checked",true).checkboxradio('refresh');
 			loadUser();
+			login($('#uname').val(),$('#pass').val());
 		}
 		
         console.log('Received Event: ' + id);
