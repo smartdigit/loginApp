@@ -19,7 +19,7 @@
 	
 	<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
-	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.0.0" />
+	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
 	
 	<feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
