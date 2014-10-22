@@ -20,5 +20,8 @@
 	<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 	
+	<feature name="StatusBar">
+            <param name="ios-package" value="CDVStatusBar" onload="true" />
+	</feature>
 	
 </widget>
