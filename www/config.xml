@@ -14,11 +14,12 @@
 	<gap:platform name="android" />
 	
 	<preference name="phonegap-version" value="3.6.3" />
-	<preference name="StatusBarOverlaysWebView" value="true" />
+	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#000000" />
 	
 	<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.0.0" />
 	
 	<feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
