@@ -4,7 +4,7 @@ function login(user,pass)
 //var user = $("#uname").val();
 //var pass = $("#pass").val();
 	$.ajax({
-		url:"http://11.99.99.41:81/login?pg=check&redirect=false",
+		url:"https://my.monolith-gruppe.com/login?pg=check&redirect=false",
 		type:"POST",
 		data:"username="+user+"&password="+pass,
 		crossDomain:true,
@@ -20,7 +20,7 @@ function login(user,pass)
 					saveUser(user,pass);
 				}
 				
-				var ref = window.open("http://11.99.99.41:81/?pg=login_external&sessionid="+data.Session_id,'_blank',"location=no,toolbar=no,keyboardDisplayRequiresUserAction=yes");
+				var ref = window.open("https://my.monolith-gruppe.com/?pg=login_external&sessionid="+data.Session_id,'_blank',"location=no,toolbar=no,keyboardDisplayRequiresUserAction=yes");
 				ref.addEventListener('loadstart', function(event){
 					if(event.url.indexOf("index.php?pg=logout") >= 0){
 						ref.close();
