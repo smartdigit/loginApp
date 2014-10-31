@@ -25,6 +25,8 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.4.css" />
+		<link rel="stylesheet" type="text/css" href="css/loader.css" />
+		
         <title>loginApp</title>
 		
 		 <!-- iOS FAVICONS -->
@@ -57,19 +59,19 @@
         <!-- iPad (Retina) -->
         <link rel="apple-touch-startup-image" href="img/splash/ios/splash1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
         <link rel="apple-touch-startup-image" href="img/splash/ios/splash1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
+		
     </head>
     <body>
-		<div id="loginPage" data-role="page">
-				<div class="ui-field-contain">
+		<div id="loginPage" data-role="page" style="background-image:url('img/splash/android/xhdpi.png');  background-repeat: no-repeat;background-size: cover;">
+				<div class="ui-field-contain" data-role="fieldcontain" style="margin-left:auto;margin-right:auto;width:60%; margin-top:10%">
 					<input type="text" data-clear-btn="true" name="username" id="uname" value="" placeholder="Username">
 					<input type="password" data-clear-btn="true" name="Password" id="pass" value=""  placeholder="Password">
-					<label>
-						<input type="checkbox" id="rememberme" data-mini="true" onchange="saveRemember(this.checked)">Remember me
+					<label style="display: inline-block">
+						<input type="checkbox" id="rememberme" data-mini="true" onchange="saveRemember(this.checked)" >Remember me
 					</label>
 					<button class="ui-btn" onclick="login($('#uname').val(),$('#pass').val())">Login</button>
 				</div>
-				<div id="PageContainer">
-				</div>
+				
 				<!--<div>
 					<button onclick="StatusBar.hide()">hide</a>
 					<button onclick="StatusBar.show()">show</a>
@@ -85,5 +87,6 @@
 		<script src="js/lib/jquery.mobile-1.4.4.min.js"></script>
 		<script src="js/lib/fastclick.js"></script>
 		<script src="js/test.js"></script>
+		<script src="js/loader.js"></script>
     </body>
 </html>
