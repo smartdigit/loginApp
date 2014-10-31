@@ -57,6 +57,18 @@ function login(user,pass)
 	});
 }
 
+function checkWifi()
+{
+	if(navigator.connection.type == Connection.NONE)
+	{
+		$.mobile.navigate("#OfflinePage");
+	}
+	else
+	{
+		$.mobile.navigate("#loginPage");
+	}
+}
+
 function saveUser(user,pass)
 {
 	var userObj = {'user':user,'pass':pass};

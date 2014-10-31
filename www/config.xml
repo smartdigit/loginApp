@@ -20,6 +20,7 @@
 	<gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />-->
 	<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 	<gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" />
+	<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
 	
 	<icon src="icon.png" /> <!-- default 512 pixels -->
         

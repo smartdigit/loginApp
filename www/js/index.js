@@ -27,12 +27,15 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('online', this.checkConnection, false);
+        document.addEventListener('offline', this.checkConnection, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+		checkWifi();
         app.receivedEvent('deviceready');		
 		if(getRemember())
 		{
@@ -47,7 +50,11 @@ var app = {
     receivedEvent: function(id) {
        //alert('device ready');
 	   
-    }
+    },
+	checkConnection: function()
+	{
+		checkWifi();
+	}
 };
 
 app.initialize();
