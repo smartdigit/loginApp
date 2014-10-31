@@ -36,6 +36,7 @@ function login(user,pass)
 				ref.addEventListener('loadstart', function(event){
 					if(event.url.indexOf("index.php?pg=logout") >= 0){
 						ref.close();
+						hideLoader();
 						event.stopPropagation();
 						event.preventDefault();
 						return false;
